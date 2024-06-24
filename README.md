@@ -1,3 +1,3 @@
 # whoami
 
-[](/public/portifolio_print.png)
+![caio souza](/public/portifolio_print.png)
