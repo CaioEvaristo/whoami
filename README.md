@@ -1,2 +1,3 @@
 # whoami
-personal portfolio
+
+[alt text](/public/portifolio_print.png)
