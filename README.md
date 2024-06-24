@@ -1,3 +1,3 @@
 # whoami
 
-[alt text](/public/portifolio_print.png)
+(/public/portifolio_print.png)
