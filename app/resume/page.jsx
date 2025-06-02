@@ -1,48 +1,53 @@
 "use client";
 
 import { FaHtml5, FaNodeJs, FaReact, FaCss3, FaJs, FaAngular, FaVuejs, FaPhp } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs, SiGoland, SiNestjs, SiRuby } from  'react-icons/si';
+import { SiTailwindcss, SiNextdotjs, SiGoland, SiNestjs, SiRuby, SiTypescript } from  'react-icons/si';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { motion } from 'framer-motion';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
 const about = {
-    title: 'About me',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non hic dignissimos officiis inventore quo, reiciendis nam ipsa suscipit dicta iste at vero.',
+    title: 'Sobre mim',
+    description: 'Desenvolvedor Full Stack com mais de 7 anos de experiência em desenvolvimento de software. Especializado em React, Node.js e outras tecnologias modernas. Comprometido com a entrega de soluções de alta qualidade e experiência do usuário excepcional.',
     Info:  [
         {
-            fieldName: 'Name',
-            fieldValue: 'Caio  Evaristo'
-        },
-        {
-            fieldName: 'Phone',
-            fieldValue: '(+55)11949752183'
-        },
-        {
-            fieldName: 'Experience',
-            fieldValue: '6 Years'
-        },
-        {
-            fieldName: 'Nationality',
-            fieldValue: 'Brazilian'
+            fieldName: 'Nome',
+            fieldValue: 'Caio Evaristo'
         },
         {
             fieldName: 'Email',
             fieldValue: 'caio.evaristodesouza@hotmail.com'
         },
         {
-            fieldName: 'Freelance',
-            fieldValue: 'Available'
+            fieldName: 'Telefone',
+            fieldValue: '(+55)11949752183'
         },
+        {
+            fieldName: 'Nacionalidade',
+            fieldValue: 'Brasileiro'
+        },
+        {
+            fieldName: 'Experiência',
+            fieldValue: '7+ Anos'
+        },
+        {
+            fieldName: 'Freelance',
+            fieldValue: 'Disponível'
+        }
     ]
 };
 
 const experience = {
     icon: '/assets/resume/best-seller.png',
-    title: 'My experience',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, dolor laborum. Et, quod consequuntur? Natus, ipsum! Esse distinctio expedita explicabo earum aliquam dolor vel.',
+    title: 'Minha Experiência',
+    description: 'Experiência profissional em desenvolvimento de software, com foco em soluções web e mobile, utilizando tecnologias modernas e boas práticas de desenvolvimento.',
     items: [
+        {
+            company: 'Automa Trade',
+            position: 'Full Stack Developer',
+            duration: '2024 - Atualmente'
+        },
         {
             company: 'Pontal Tech',
             position: 'Full Stack Developer',
@@ -57,20 +62,24 @@ const experience = {
 };
 
 const skill = {
-    title: 'My Skills',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem perspiciatis magni quae, nulla dolorem fuga accusamus magnam aut cumque expedita molestiae facere est. Eveniet, voluptates ipsum ut assumenda quos nesciunt.',
+    title: 'Minhas Habilidades',
+    description: 'Desenvolvedor Full Stack com amplo conhecimento em diversas tecnologias e frameworks modernos. Especializado em desenvolvimento web com foco em React, Node.js e suas ecossistemas. Experiência em arquitetura de software, desenvolvimento de APIs RESTful, e implementação de soluções escaláveis.',
     skillList: [
         {
-            icon: <FaHtml5 />,
-            name: 'html'
-        },
-        {
-            icon: <FaCss3 />,
-            name: 'Css3'
+            icon: <FaPhp />,
+            name: 'PHP'
         },
         {
             icon: <FaNodeJs />,
-            name: 'NodeJs'
+            name: 'Node.js'
+        },
+        {
+            icon: <SiTypescript />,
+            name: 'TypeScript'
+        },
+        {
+            icon: <FaAngular />,
+            name: 'Angular'
         },
         {
             icon: <FaReact />,
@@ -78,35 +87,23 @@ const skill = {
         },
         {
             icon: <FaVuejs />,
-            name: 'VueJs'
-        },
-        {
-            icon: <FaPhp />,
-            name: 'PHP'
-        },
-        {
-            icon: <FaAngular />,
-            name: 'Angular'
-        },
-        {
-            icon: <SiGoland />,
-            name: 'Golang'
+            name: 'Vue.js'
         },
         {
             icon: <SiNextdotjs />,
-            name: 'next.js'
-        },
-        {
-            icon: <SiTailwindcss />,
-            name: 'Tailwind'
+            name: 'Next.js'
         },
         {
             icon: <SiNestjs />,
-            name: 'nestJs'
+            name: 'NestJS'
         },
         {
-            icon: <SiRuby/>,
-            name: 'Ruby'
+            icon: <SiTailwindcss />,
+            name: 'Tailwind CSS'
+        },
+        {
+            icon: <SiGoland />,
+            name: 'Go'
         }
     ]
 };
@@ -132,12 +129,12 @@ const Resume = () => {
                             <div className='flex flex-col gap-[30px]'>
                                 <h3 className='text-4xl font-bold'>{about.title}</h3>
                                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{about.description}</p>
-                                <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0'>
+                                <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-8 max-w-[620px] mx-auto xl:mx-0'>
                                     {about.Info.map((info, index) => {
                                         return(
                                             <li key={index} className='flex items-center justify-center xl:justify-start gap-4'>
-                                                <span className='text-white/60'>{info.fieldName}</span>
-                                                <span className='text-xl'>{info.fieldValue}</span>
+                                                <span className='text-white/60 text-sm'>{info.fieldName}</span>
+                                                <span className='text-base'>{info.fieldValue}</span>
                                             </li>
                                         )
                                     })}
