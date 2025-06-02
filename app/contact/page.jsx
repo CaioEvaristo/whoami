@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectLabel, SelectValue } from "@/components/ui/select";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaInstagram, FaBlog, FaLinkedin } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaInstagram, FaBlog, FaLinkedin, FaGithub } from "react-icons/fa";
 
 import { motion } from "framer-motion";
 
@@ -35,13 +35,18 @@ const socialIcons = [
     },
     {
         icon: <FaInstagram />,
-        link: 'https://instagram.com/caio.evaristo',
+        link: 'https://www.instagram.com/caio_gentleman_thief?igsh=dXVhdHc5cHpseW82',
         color: 'text-[#E4405F]'
     },
     {
         icon: <FaLinkedin />,
-        link: 'https://linkedin.com/in/caio-evaristo',
+        link: 'https://www.linkedin.com/in/caio-souza-489464131/',
         color: 'text-[#0A66C2]'
+    },
+    {
+        icon: <FaGithub />,
+        link: 'https://github.com/caio-evaristo',
+        color: 'text-white'
     },
     {
         icon: <FaBlog />,
